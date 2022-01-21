@@ -14,7 +14,7 @@ class App extends React.Component {
             <header className="app-header">
                 <h1>My Amazing Todo-List App </h1>
                 <p> The most simple and amazing todo-list app</p>
-                <List/>
+                <List name="Hello"/>
             </header>
         </div>
         );
