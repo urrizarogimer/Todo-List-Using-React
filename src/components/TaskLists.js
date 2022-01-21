@@ -2,20 +2,29 @@ import react from 'react';
 import Task from './Task.js';
 import { useState } from 'react';
 function TaskList(){
-    const taskListItem = ["Sky full of stars","Feed Fish","Clean workstation"];
+    const [taskListItem, setTaskListItem] = useState(["Sky full of stars","Feed Fish","Clean workstation"]);
    
-    const [taskValue, setTaskValue] = useState("Add new Task");
+    const [taskValue, setTaskValue] = useState("");
     console.log("taskValue:" + taskValue);
     const inputChangeHandler = (e) => {
         setTaskValue(e.target.value);
     }
-    console.log(taskValue);
+    
+
+    const addTaskHandler = () =>{
+        setTaskListItem([taskValue, ...taskListItem]);
+        setTaskValue("");
+    }
     return(
         <>
             <input 
                 className="task-input" 
                 placeholder='Add Task' 
-                onChange={inputChangeHandler}/>
+                onChange={inputChangeHandler}
+                onBlur={addTaskHandler}
+                value={taskValue}
+                />
+
                 
             <ul>
                 {taskListItem.map((task, index) => {
