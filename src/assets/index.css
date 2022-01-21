@@ -10,9 +10,9 @@ body{
 }
 .app {
     text-align: center;
-  }
-  
-  .app-header {
+}
+
+.app-header {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -21,15 +21,23 @@ body{
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-  }
-  ul {
+}
+ul {
     list-style: none;
-    width: 50%;
-  }
+    width: 100%;
+}
 
-  .tasks-item {
+.tasks-item {
     border: 1px solid #d3d3d30f;
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 5px;
-  }
+}
+
+.task-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+}

@@ -18,11 +18,14 @@ function Task(props){
 function TaskList(){
     const taskListItem = ["Sky full of stars","Feed Fish","Clean workstation"];
     return(
+        <div>
+        <input class-name="task-input"/>
         <ul>
             {taskListItem.map((task, index) => {
                 return <Task key={index} taskName = {task} />;
             })}
         </ul>
+        </div>
     )
 }
 
