@@ -1,33 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
-
-
-function List(){
-    return(
-        <TaskList/>
-    );
-}
-
-function Task(props){
-    return(
-        <li className='tasks-item'>{props.taskName}</li>
-    );
-}
-
-function TaskList(){
-    const taskListItem = ["Sky full of stars","Feed Fish","Clean workstation"];
-    return(
-        <div>
-        <input class-name="task-input"/>
-        <ul>
-            {taskListItem.map((task, index) => {
-                return <Task key={index} taskName = {task} />;
-            })}
-        </ul>
-        </div>
-    )
-}
+import TaskList from './components/TaskLists.js';
 
 function App() {
     return(
@@ -35,7 +9,7 @@ function App() {
             <header className="app-header">
                 <h1>My Amazing Todo-List App </h1>
                 <p> The most simple and amazing todo-list app</p>
-                <List/>
+                <TaskList/>
             </header>
         </div>
     );
